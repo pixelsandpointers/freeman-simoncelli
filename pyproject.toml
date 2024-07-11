@@ -1,0 +1,23 @@
+[project]
+name = "scenestats"
+version = "0.0.1"
+authors = [
+  { name="Benjamin Beilharz", email="benjamin.beilharz@pm.me" },
+]
+description = "A PyTorch port of the Freeman-Simoncelli model introduced in J. Freeman and E. P. Simoncelli, “Metamers of the ventral stream,” Nat Neurosci, vol. 14, no. 9, pp. 1195–1201, Sep. 2011, doi: 10.1038/nn.2889."
+readme = "readme.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dynamic = ["dependencies", "optional-dependencies"]
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+optional-dependencies = {dev = { file = ["requirements-dev.txt"] }}
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
